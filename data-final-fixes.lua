@@ -2,21 +2,14 @@ function centify(prop,tab)
   tab[prop]=tab[prop]/100
 end
 
---[[
-assemblers
-]]
-centify("crafting_speed", data.raw["assembling-machine"]["assembling-machine-1"])
-centify("crafting_speed", data.raw["assembling-machine"]["assembling-machine-2"])
-centify("crafting_speed", data.raw["assembling-machine"]["assembling-machine-3"])
-centify("crafting_speed", data.raw["assembling-machine"]["chemical-plant"])
-centify("crafting_speed", data.raw["assembling-machine"]["oil-refinery"])
-centify("crafting_speed", data.raw["rocket-silo"]["rocket-silo"])
---[[
-furnaces
-]]
-centify("crafting_speed", data.raw["furnace"]["stone-furnace"])
-centify("crafting_speed", data.raw["furnace"]["steel-furnace"])
-centify("crafting_speed", data.raw["furnace"]["electric-furnace"])
+for k,v in pairs(data.raw["assembling-machine"]) do
+  log("centifying "..k)
+  centify("crafting_speed", v)
+end
+for k,v in pairs(data.raw["furnace"]) do
+  log("centifying "..k)
+  centify("crafting_speed", v)
+end
 
 --[[
 belts: probably not
