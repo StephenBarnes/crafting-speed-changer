@@ -1,0 +1,8 @@
+{
+  "name": "factorio100",
+  "version": "0.1.0",
+  "title": "Factorio 100",
+  "author": "pancelor",
+  "factorio_version": "1.1",
+  "description": "This mod makes all crafting recipes take 100 times longer. Could be useful for slowrunners."
+}
