@@ -1,8 +1,8 @@
 {
-  "name": "factorio100",
-  "version": "0.1.0",
-  "title": "Factorio 100",
-  "author": "pancelor",
+  "name": "CraftingSpeedChanger",
+  "version": "1.0",
+  "title": "Crafting Speed Changer",
+  "author": "pancelor, StephenBarnes",
   "factorio_version": "1.1",
-  "description": "All crafting recipes take 100 times longer. (could be useful for slowrunners)"
+  "description": "Change the speed of all crafting recipes, by hand, by assembler, and by furnace."
 }
