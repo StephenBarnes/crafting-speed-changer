@@ -1,25 +1,26 @@
-function centify(prop,tab)
-  tab[prop]=tab[prop]/100
+function divset(a, b, c)
+    a[b] = a[b] / c
 end
 
 for k,v in pairs(data.raw["assembling-machine"]) do
-  log("centifying "..k)
-  centify("crafting_speed", v)
+  log("Adjusting crafting time: "..k)
+  divset(v, "crafting_speed", settings.startup["crafting-speed-changer-assembler"].value)
 end
+
 for k,v in pairs(data.raw["furnace"]) do
-  log("centifying "..k)
-  centify("crafting_speed", v)
+  log("Adjusting crafting time: "..k)
+  divset(v, "crafting_speed", settings.startup["crafting-speed-changer-furnace"].value)
 end
 
 --[[
-belts: probably not
+TODO belts?
 ]]
 -- centify("speed", data.raw["transport-belt"]["transport-belt"])
 -- centify("speed", data.raw["transport-belt"]["fast-transport-belt"])
 -- centify("speed", data.raw["transport-belt"]["express-transport-belt"])
 
 --[[
-miners: probably not
+TODO miners?
 ]]
 -- centify("?", data.raw["mining-drill"]["burner-mining-drill"])
 -- centify("?", data.raw["mining-drill"]["electric-mining-drill"])
